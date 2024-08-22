@@ -2,18 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: font-sans, sans-serif;
-}
 
 @layer base {
-  .heading {
-    font-family: var(--font-copperplate);
-    font-weight: 800;
+  body {
+    font-family: font-sans, sans-serif;
+    background-color: #000;
   }
-  .sub-heading {
-    font-family: var(--font-helvetica-neue);
-    font-weight: 500;
+  .layout {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+  }
+  .header {
+    background-color: #000;
+  }
+  .main {
+    background-color: #fff;
+  }
+  .footer {
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    background-color: #000;
+
+    & p {
+      @apply italic text-sm text-slate-400 font-thin;
+    }
+  }
+  .heading {
+    @apply py-6 text-8xl text-slate-900 text-center font-livvic uppercase font-bold;
   }
   .logo {
     font-family: var(--font-livvic);

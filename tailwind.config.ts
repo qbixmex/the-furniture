@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: [
@@ -18,6 +19,21 @@ const config: Config = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function({ addUtilities }) {
+      const newUtilities = {
+        '.font-livvic': {
+          fontFamily: 'var(--font-livvic)',
+        },
+        '.font-helvetica-neue': {
+          fontFamily: 'var(--font-helvetica-neue)',
+        },
+        '.font-copperplate': {
+          fontFamily: 'var(--font-copperplate)',
+        },
+      };
+      addUtilities(newUtilities);
+    }),
+  ],
 };
 export default config;

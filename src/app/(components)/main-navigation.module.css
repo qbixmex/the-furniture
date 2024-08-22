@@ -1,0 +1,43 @@
+.wrapper {
+  @apply container mx-auto;
+}
+
+.layout {
+  @apply text-white flex items-center;
+}
+
+.navigation {
+  @apply flex-1 flex justify-around;
+}
+
+.navigationLink {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  position: relative;
+  font-family: var(--font-copperplate);
+  font-weight: 500;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: currentColor;
+    transition: width 250ms ease-in-out;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.navigationLinkActive::after {
+  width: 100%;
+}
+
+.bottomDivider {
+  @apply h-3 bg-gray-300/90;
+}
