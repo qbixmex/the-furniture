@@ -7,6 +7,7 @@
   body {
     font-family: font-sans, sans-serif;
     background-color: #000;
+    color: #fff;
   }
   .layout {
     display: grid;
@@ -16,8 +17,11 @@
   .header {
     background-color: #000;
   }
+  .main {
+    @apply bg-white text-slate-900;
+  }
   .heading {
-    @apply py-6 text-8xl text-slate-900 text-center font-livvic uppercase font-bold;
+    @apply py-6 text-4xl text-slate-900 text-center font-livvic uppercase font-bold;
   }
   .logo {
     font-family: var(--font-livvic);
