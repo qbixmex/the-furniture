@@ -16,16 +16,6 @@
   .header {
     background-color: #000;
   }
-  .footer {
-    color: #fff;
-    padding: 2rem 0;
-    text-align: center;
-    background-color: #000;
-
-    & p {
-      @apply italic text-sm text-slate-400 font-thin;
-    }
-  }
   .heading {
     @apply py-6 text-8xl text-slate-900 text-center font-livvic uppercase font-bold;
   }

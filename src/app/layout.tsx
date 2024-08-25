@@ -3,6 +3,7 @@ import { livvic, helveticaNeue, copperplate } from "@/fonts/fonts";
 import { MainNavigation } from "./(components)";
 import "./globals.css";
 import clsx from "clsx";
+import Footer from "./(components)/footer";
 
 export const metadata: Metadata = {
   title: "The Furniture",
@@ -26,9 +27,7 @@ export default function RootLayout({
           <main className="main">
             {children}
           </main>
-          <footer className="footer">
-            <p>&copy; {new Date().getFullYear()} The Furniture</p>
-          </footer>
+          <Footer />
         </div>
       </body>
     </html>

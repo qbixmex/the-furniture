@@ -10,9 +10,10 @@ export default function Home() {
         <Image
           src="/images/home/00-the-one-sofa.jpg"
           alt="The Furniture Sofa"
-          className="w-full max-w-[1440px] h-auto max-h-[960px] lg:auto object-cover object-left-top"
+          className="w-full max-w-[1440px] lg:auto object-cover object-left-top"
           width={1440}
           height={960}
+          style={{ aspectRatio: "3 / 2" }}
         />
         <Button className="absolute left-0 bottom-5 right-0 m-auto w-fit">New Collection</Button>
       </section>
