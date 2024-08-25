@@ -1,5 +1,5 @@
 .navigationMobileLinks {
-  @apply absolute -left-[100%] top-0 bg-white w-full h-full grid place-content-center gap-y-10 transition-all duration-500 ease-in-out;
+  @apply absolute top-0 bg-white w-full h-full grid place-content-center gap-y-10 transition-all duration-500 ease-in-out z-[100];
 }
 
 .navigationMobileCloseBtn {
@@ -8,14 +8,14 @@
 
 .navigationMobileLink {
   @apply relative text-2xl font-medium text-slate-800 font-copperplate w-fit;
+}
 
-  &::after {
-    @apply block content-[''] w-0 h-[3px] bg-current absolute transition-[width] duration-200 ease-in-out left-0 -bottom-2;
-  }
+.navigationMobileLink::after {
+  @apply block content-[''] w-0 h-[3px] bg-current absolute transition-[width] duration-200 ease-in-out left-0 -bottom-2;
+}
 
-  &:hover::after {
-    @apply w-full;
-  }
+.navigationMobileLink:hover::after {
+  @apply w-full;
 }
 
 .subLinksWrapper {
@@ -24,12 +24,12 @@
 
 .subLink {
   @apply relative w-fit font-copperplate font-medium text-base text-slate-700;
+}
 
-  &::after {
-    @apply absolute content-[''] left-0 -bottom-[8px] w-0 h-[3px] bg-current transition-[width] duration-[250ms] ease-in-out;
-  }
+.subLink::after {
+  @apply absolute content-[''] left-0 -bottom-[8px] w-0 h-[3px] bg-current transition-[width] duration-[250ms] ease-in-out;
+}
 
-  &:hover::after {
-    @apply w-full;
-  }
+.subLink:hover::after {
+  @apply w-full;
 }
