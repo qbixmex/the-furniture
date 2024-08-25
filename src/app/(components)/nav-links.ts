@@ -52,7 +52,7 @@ export const navLinks: NavLink[] = [
   {
     id: "e124c630",
     url: "#",
-    label: "Dining",
+    label: "Dining"
   },
   {
     id: "be13d35",

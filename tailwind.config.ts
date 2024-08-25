@@ -12,6 +12,14 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-helvetica-neue)", "sans-serif"],
       },
+      colors: {
+        beige: {
+          light: "#F3F3F3",
+          DEFAULT: "#c4c0bc",
+          dark: "#9e9b98",
+        },
+        marmot: "#d5d5d5"
+      },
     },
   },
   plugins: [

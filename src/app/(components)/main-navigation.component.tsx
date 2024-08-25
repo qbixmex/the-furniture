@@ -49,7 +49,7 @@ const MainNavigation = () => {
                   href={link.url}
                   rel={(link.url === "#") ? "nofollow" : undefined}
                   className={clsx(styles.navigationLink, {
-                    [styles.navigationLinkActive]: pathname === link.url,
+                    [styles.navigationLinkActive]: pathname.includes(link.label.toLowerCase()),
                   })}
                 >{link.label}</Link>
                 {link.subLinks && (

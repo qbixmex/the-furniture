@@ -6,7 +6,7 @@ type Props = {
 
 const LivingPage: React.FC<Props> = ({ params: { slug } }) => {
 
-    return (
+  return (
     <>
       <h1 className="heading">{slug}</h1>
     </>
