@@ -1,14 +1,48 @@
+import Image from "next/image";
+import { Button } from "./(components)";
+import Slider from "./(components)/ui/slider";
+import { sofasResized, inspiration } from "@/data/furniture";
+
 export default function Home() {
   return (
-    <div>
-      <h1 className="heading text-8xl">The furniture</h1>
-      <h2 className="heading text-7xl">Subtitle</h2>
-      <h3 className="sub-heading text-6xl">Third Title</h3>
-      <h4 className="sub-heading text-5xl">Fourth Title</h4>
-      <h5 className="sub-heading text-4xl">Fifth Title</h5>
-      <h6 className="sub-heading text-3xl">Sixth Title</h6>
-      <p className="font-thin text-8xl">TH</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, vitae inventore repellat facere sapiente fugit. Inventore, aperiam. Omnis odit, aspernatur iure aut magni debitis ducimus temporibus, ut vel totam accusamus aliquid expedita, quidem voluptatibus consectetur! Sed animi cupiditate minus vero itaque. Labore accusamus dicta cum repellat laboriosam assumenda illum velit inventore error. Quas cum eum consequuntur voluptatibus repellendus illo molestias accusantium cupiditate iste alias, nihil ratione esse nam minus provident laborum architecto est dolore nemo sequi earum odio. Earum eius rem sunt itaque natus id reiciendis aut, architecto accusamus dolor excepturi asperiores quasi esse exercitationem! Obcaecati iusto provident autem. Velit iure asperiores animi quas mollitia ipsum nulla debitis dicta quos officiis eos provident, at quod rem eveniet. Harum ipsa natus sunt ab blanditiis earum ullam maiores, labore minima. Ullam aut ut dolorum beatae similique sint ratione mollitia vitae odio illo cumque tenetur quae perferendis, obcaecati repellendus inventore, quis praesentium in sit quidem delectus corporis aperiam reprehenderit. Ut, quo harum aut placeat, delectus repudiandae assumenda, nobis qui maiores accusamus ullam perspiciatis eligendi? Est ad doloremque adipisci error! Quos omnis deleniti impedit illum suscipit nulla veritatis eaque. In atque dignissimos a corporis perferendis excepturi molestiae alias debitis est eligendi beatae unde asperiores libero accusamus, et laudantium mollitia maiores cupiditate corrupti recusandae nulla quidem placeat id. Odio facere tempore est magni ipsum sunt rem minima quidem repellat quam nisi quos accusamus nulla dignissimos maxime dolores, consequuntur enim quia obcaecati! Exercitationem, corrupti blanditiis! Ipsa odio pariatur quasi ratione ab dolor expedita aspernatur iusto dolorem deleniti, odit quas. Iusto nostrum, ipsum in eveniet explicabo totam officia, voluptate rem ut commodi hic quisquam, vel laborum quia quis ullam odio? Illo esse natus soluta vel omnis perspiciatis, provident id praesentium similique error, tenetur cupiditate atque quisquam corporis magni aut impedit. Aperiam amet ex iste error laboriosam nobis qui repellat rerum asperiores! Dolorum accusamus, in eaque harum repellendus labore id aspernatur aliquam nihil voluptatum, eius sunt vitae doloribus. Maxime fugiat quia quas, molestias sit nostrum? Ullam, tempora suscipit iste illo unde asperiores eum accusamus in. Impedit nulla, quasi a, repellat totam atque earum maiores dolore iusto consectetur obcaecati? Esse omnis hic minus nisi eius repellendus, voluptatibus maxime soluta, quaerat, architecto repellat similique obcaecati dolorum maiores suscipit aperiam animi praesentium exercitationem aut ipsam consectetur amet quasi porro. Ratione quia quis quam quae voluptatem unde rem laboriosam modi nostrum error debitis cupiditate at, eos, ipsam aliquid officiis asperiores, atque omnis veniam. Commodi ad possimus minus itaque eligendi explicabo repudiandae eveniet facere, nemo laborum illum quo unde quaerat et mollitia earum numquam iure sequi voluptas pariatur placeat aut natus voluptatibus officiis. Ex explicabo consectetur, omnis, optio ipsam quidem voluptatum obcaecati commodi ea quod ipsa unde totam. Quod excepturi itaque repellendus, possimus explicabo veritatis, ab repudiandae asperiores illo doloribus molestias. Aspernatur iure unde ut dignissimos similique architecto dolore reprehenderit at eveniet aperiam veritatis tempora necessitatibus quae pariatur accusamus ex perspiciatis earum dicta repudiandae, doloribus officiis ipsa nesciunt provident repellat. Cum animi ea hic et laudantium dolores eveniet aliquid, velit cumque facilis temporibus.</p>
-    </div>
+    <main>
+      <section className="relative">
+        <Image
+          src="/images/home/00-the-one-sofa.jpg"
+          alt="The Furniture Sofa"
+          className="w-full max-w-[1440px] lg:auto object-cover object-left-top"
+          width={1440}
+          height={960}
+          style={{ aspectRatio: "3 / 2" }}
+        />
+        <Button className="absolute left-0 bottom-5 right-0 m-auto w-fit">New Collection</Button>
+      </section>
+      <section className="bg-beige-light">
+        <section className="bg-beige py-14 font-copperplate text-white text-lg text-center font-medium">
+          <h2>Furniture that will last a lifetime</h2>
+        </section>
+        <section className="container pt-16 px-5 pb-8 mx-auto md:grid md:grid-cols-3 md:gap-7">
+          {sofasResized.map((sofa) => (
+            <Image
+              key={sofa.id}
+              src={sofa.url}
+              className="bg-gray-500 w-full h-auto mb-7 object-cover object-left-top rounded md:mb-0"
+              width={480}
+              height={590}
+              alt={sofa.name}
+            />
+          ))}
+        </section>
+        <div className="flex justify-center pb-8">
+          <Button>Shop Living</Button>
+        </div>
+      </section>
+      <section className="px-5 py-10 bg-marmot">
+        <h2 className="text-4xl mb-5 text-white uppercase font-extrabold font-helvetica-neue">
+          Inspiration
+        </h2>
+        <Slider slides={inspiration} />
+      </section>
+    </main>
   );
 }

@@ -1,0 +1,59 @@
+.wrapper {
+  @apply container px-5 mx-auto lg:p-0;
+}
+
+.layout {
+  @apply text-white flex items-center;
+}
+
+.mobileMenuBtn {
+  @apply flex-1 flex justify-end focus:outline-none lg:hidden;
+}
+
+.navigation {
+  @apply hidden relative flex-1 lg:flex lg:justify-around;
+}
+
+.navigationLink {
+  @apply relative text-base font-copperplate font-medium;
+
+  &::after {
+    @apply absolute content-[''] left-0 -bottom-[8px] w-0 h-[3px] bg-current transition-[width] duration-[250ms] ease-in-out;
+  }
+
+  &:hover::after {
+    @apply w-full;
+  }
+}
+
+.navigationLinkActive::after {
+  @apply w-full;
+}
+
+.bottomDivider {
+  @apply h-3 bg-gray-300/90;
+}
+
+.subLinksWrapper {
+  @apply absolute top-0 left-0 w-[300px] h-[100px] hidden hover:block;
+}
+
+.subLinksIndicator {
+  @apply absolute top-10 left-[68px] z-0 size-4 bg-white rotate-45;
+}
+
+.subLinksContainer {
+  @apply absolute top-12 left-12 z-20 flex flex-col gap-4 bg-white py-5 px-8 rounded-md shadow-md;
+}
+
+.subLink {
+  @apply relative w-fit font-copperplate text-sm text-slate-700;
+
+  &::after {
+    @apply absolute content-[''] left-0 -bottom-[8px] w-0 h-[3px] bg-current transition-[width] duration-[250ms] ease-in-out;
+  }
+
+  &:hover::after {
+    @apply w-full;
+  }
+}

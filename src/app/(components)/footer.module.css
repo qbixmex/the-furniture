@@ -1,0 +1,39 @@
+.footer {
+  @apply container md:flex text-white px-8 py-10 md:py-20 bg-black font-copperplate;
+}
+
+.footerLogo {
+  @apply w-full flex justify-center md:w-1/4;
+  & img {
+    @apply size-[200px];
+  }
+}
+
+.footerContent {
+  @apply w-full md:w-3/4;
+}
+
+.footerTitle {
+  @apply text-center mb-10 md:text-left md:w-2/4 md:mx-auto text-lg font-medium;
+}
+
+.footerLinks {
+  @apply w-2/4 mx-auto md:grid md:grid-cols-2 md:gap-10 font-medium;
+
+  & section {
+    @apply mb-5 flex flex-col gap-5 md:mb-0;
+    & a {
+      @apply relative text-sm;
+      &::after {
+        @apply absolute content-[''] top-[30px] left-0 h-[3px] w-0 bg-white transition-[width] duration-[250ms] ease-in-out;
+      }
+      &:hover::after {
+        @apply w-full;
+      }
+    }
+  }
+}
+
+.footerCopyright {
+  @apply hidden italic text-sm text-slate-400 font-thin;
+}
