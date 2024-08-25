@@ -5,7 +5,7 @@ import { sofasResized, inspiration } from "@/data/furniture";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <section className="relative">
         <Image
           src="/images/home/00-the-one-sofa.jpg"
@@ -43,6 +43,6 @@ export default function Home() {
         </h2>
         <Slider slides={inspiration} />
       </section>
-    </main>
+    </>
   );
 }

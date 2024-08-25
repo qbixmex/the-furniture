@@ -44,6 +44,7 @@ const NavigationMobile: React.FC<{
 
   return (
     <nav className={clsx(styles.navigationMobileLinks, {
+      "left-[-100%]": !isMenuOpen,
       "left-0": isMenuOpen,
     })}>
       <div className={styles.navigationMobileCloseBtn}>

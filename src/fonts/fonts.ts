@@ -1,5 +1,5 @@
 import { Livvic } from 'next/font/google'
-import localFont from "@next/font/local";
+import localFont from "next/font/local";
  
 export const livvic = Livvic({
   subsets: ["latin"],
