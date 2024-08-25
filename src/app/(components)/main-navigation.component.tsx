@@ -5,7 +5,7 @@ import Image from "next/image";
 import styles from "./main-navigation.module.css";
 import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
-import { navLinks } from './nav-links';
+import { navLinks } from '@/data/nav-links';
 import clsx from "clsx";
 import NavigationMobile from "./navigation-mobile";
 import { useState } from "react";

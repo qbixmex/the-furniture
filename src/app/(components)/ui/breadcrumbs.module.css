@@ -1,0 +1,23 @@
+.wrapper {
+  @apply flex gap-5 my-5 mx-10 justify-end items-center;
+}
+
+.link {
+  @apply relative text-base font-copperplate font-extralight italic text-slate-700;
+}
+
+.link:hover {
+  @apply text-slate-900;
+}
+
+.text {
+  @apply font-copperplate font-extralight italic text-slate-900;
+}
+
+.link::after {
+  @apply absolute content-[''] bg-slate-900 left-0 -bottom-1 w-0 h-0.5 transition-[width] duration-[250ms] ease-in-out;
+}
+
+.link:hover::after {
+  @apply w-full;
+}

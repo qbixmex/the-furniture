@@ -16,7 +16,6 @@
 
 .navigationLink {
   @apply relative text-base font-copperplate font-medium;
-
 }
 
 .navigationLink::after {
