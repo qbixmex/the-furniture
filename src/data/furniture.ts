@@ -69,32 +69,22 @@ export const inspiration: Inspiration = [
 export const sofas: Sofa[] = [
   {
     id: "a1413222-bcc3-4a03-9f2c-785299d0177d",
-    name: "Ashton",
-    url: "",
+    name: "Karlina",
+    url: "/images/living/sofas/01-karlina.jpg",
   },
   {
     id: "c53791f3-b219-4055-985a-953d5b1b6852",
-    name: "Preston",
-    url: "",
+    name: "Hanna",
+    url: "/images/living/sofas/02-hanna.jpg",
   },
   {
     id: "c19c0829-7ff0-4723-8e85-04cd64f136d6",
-    name: "Hanna",
-    url: "",
+    name: "Ethan",
+    url: "/images/living/sofas/03-ethan.jpg",
   },
   {
     id: "4d2f0198-f4e1-48ac-90d9-0066166e3433",
-    name: "Billy",
-    url: "",
-  },
-  {
-    id: "040d8c0c-9a49-4a4e-b827-ad0e0942b82c",
-    name: "Ethan",
-    url: "",
-  },
-  {
-    id: "2706e764-ee76-41bb-a328-0009572f8842",
     name: "Preston",
-    url: "",
+    url: "/images/living/sofas/04-preston.jpg",
   },
 ];
