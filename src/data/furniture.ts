@@ -1,7 +1,7 @@
 type Sofa = {
   id: string;
   name: string;
-  image: string;
+  url: string;
 };
 
 export type Inspiration = {
@@ -9,6 +9,24 @@ export type Inspiration = {
   url: string;
   alt: string;
 }[];
+
+export const sofasResized: Sofa[] = [
+  {
+    id: "06c94d9c-3fe2-4933-863b-7c8511523249",
+    name: "Ottoman Sofa",
+    url: "/images/home/sofas-resized/01-ottoman-sofa.jpg"
+  },
+  {
+    id: "898eb4f1-e1a5-4d29-ac74-01971ef60aa8",
+    name: "The One Sofa",
+    url: "/images/home/sofas-resized/02-the-one-sofa.jpg"
+  },
+  {
+    id: "c733da22-fc7f-4684-8bf3-88daade52e8b",
+    name: "Single Arm Chair",
+    url: "/images/home/sofas-resized/03-single-arm-chair-couch.jpg"
+  },
+];
 
 export const inspiration: Inspiration = [
   {
@@ -52,31 +70,31 @@ export const sofas: Sofa[] = [
   {
     id: "a1413222-bcc3-4a03-9f2c-785299d0177d",
     name: "Ashton",
-    image: "",
+    url: "",
   },
   {
     id: "c53791f3-b219-4055-985a-953d5b1b6852",
     name: "Preston",
-    image: "",
+    url: "",
   },
   {
     id: "c19c0829-7ff0-4723-8e85-04cd64f136d6",
     name: "Hanna",
-    image: "",
+    url: "",
   },
   {
     id: "4d2f0198-f4e1-48ac-90d9-0066166e3433",
     name: "Billy",
-    image: "",
+    url: "",
   },
   {
     id: "040d8c0c-9a49-4a4e-b827-ad0e0942b82c",
     name: "Ethan",
-    image: "",
+    url: "",
   },
   {
     id: "2706e764-ee76-41bb-a328-0009572f8842",
     name: "Preston",
-    image: "",
+    url: "",
   },
 ];

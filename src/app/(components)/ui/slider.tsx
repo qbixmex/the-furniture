@@ -31,6 +31,7 @@ const Slider: FC<Props> = ({ slides, className, style }) => {
             '--swiper-navigation-color': '#fff',
             '--swiper-pagination-color': '#fff',
             '--swiper-navigation-size': '30px',
+            '--swiper-navigation-position': '10px',
           } as React.CSSProperties
         }
         spaceBetween={20}
@@ -59,7 +60,7 @@ const Slider: FC<Props> = ({ slides, className, style }) => {
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
             <Image
-              className="w-full h-[720px] object-cover rounded"
+              className="w-full h-auto max-w-[1440px] max-h-[720px] object-cover rounded"
               src={slide.url}
               width={1440}
               height={960}
