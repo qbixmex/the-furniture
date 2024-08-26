@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       <figure className={styles.footerLogo}>
         <Image
-          src="/images/the-furniture-logo.png"
+          src="/images/the-furniture-logo.jpg"
           width={200}
           height={200}
           alt="The Furniture"
