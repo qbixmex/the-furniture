@@ -1,12 +1,12 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { X } from "lucide-react";
-import { NavLink } from './nav-links';
 import styles from "./navigation-mobile.module.css";
 import clsx from "clsx";
-import { useEffect, useState } from "react";
+import type { NavLink, SubLink } from "@/data/nav-links";
 
 type SubLinksState = {
   [key: string]: boolean;
@@ -76,7 +76,7 @@ const NavigationMobile: React.FC<{
               "flex": subLinksState[link.label.toLowerCase()],
               "hidden": !subLinksState[link.label.toLowerCase()],
             })}>
-              {link.subLinks.map((subLink) => (
+              {link.subLinks.map((subLink: SubLink) => (
                 <Link
                   key={subLink.id}
                   href={subLink.url}
