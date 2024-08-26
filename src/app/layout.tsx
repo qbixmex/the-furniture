@@ -24,6 +24,7 @@ export default function RootLayout({
       ])}>
         <div className="layout">
           <MainNavigation />
+          <div className="h-3 bg-gray-300/90" />
           <main className="main">
             {children}
           </main>

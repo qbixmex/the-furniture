@@ -30,10 +30,6 @@
   @apply w-full;
 }
 
-.bottomDivider {
-  @apply h-3 bg-gray-300/90;
-}
-
 .subLinksWrapper {
   @apply absolute top-0 left-0 w-[300px] h-[100px] hidden hover:block;
 }
