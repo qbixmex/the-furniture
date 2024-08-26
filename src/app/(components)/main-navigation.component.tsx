@@ -77,7 +77,6 @@ const MainNavigation = () => {
           />
         </div>
       </div>
-      <div className={styles.bottomDivider} />
     </header>
   );
 };
