@@ -1,5 +1,5 @@
 .navigationMobileLinks {
-  @apply absolute top-0 bg-white w-full h-full grid place-content-center gap-y-10 transition-all duration-500 ease-in-out z-[100];
+  @apply absolute top-0 bg-white w-full h-screen grid place-content-center gap-y-10 transition-all duration-500 ease-in-out z-[200];
 }
 
 .navigationMobileCloseBtn {

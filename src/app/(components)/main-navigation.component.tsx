@@ -27,12 +27,11 @@ const MainNavigation = () => {
     <header className="header">
       <div className={styles.wrapper}>
         <div className={styles.layout}>
-          <figure>
+          <figure className={styles.logo}>
             <Link href="/">
               <Image
-                src="/images/the-furniture-logo.png"
+                src="/images/the-furniture-logo.jpg"
                 alt="The Furniture Logo"
-                className="size-[75px] lg:size-[150px]"
                 height={150}
                 width={150}
                 title="The Furniture"
