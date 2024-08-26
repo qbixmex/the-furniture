@@ -18,10 +18,9 @@ const SubPage: React.FC<Props> = ({ params: { page, slug } }) => {
 
       <section className="container mx-auto px-5 md:px-0 md:grid md:grid-cols-2 md:gap-5 mb-10">
         {sofas.map((sofa) => (
-          <Link href="#" className="group">
+          <Link key={sofa.id} href="#" className="group">
             <figure className="mb-10 md:mb-0">
               <Image
-                key={sofa.id}
                 src={sofa.url}
                 className="rounded-t group-hover:filter group-hover:brightness-90 transition-all"
                 alt={`${sofa.id} sofa`}
