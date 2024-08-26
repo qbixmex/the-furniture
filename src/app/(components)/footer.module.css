@@ -1,9 +1,9 @@
 .footer {
-  @apply container md:flex text-white px-8 py-10 md:py-20 bg-black font-copperplate;
+  @apply container grid grid-cols-1 md:grid-cols-[repeat(3,1fr)] text-white px-8 py-10 md:py-20 bg-black font-copperplate;
 }
 
 .footerLogo {
-  @apply w-full flex justify-center md:w-1/4;
+  @apply w-full col-span-1 grid place-content-center md:place-content-start;
 }
 
 .footerLogo img {
@@ -11,7 +11,7 @@
 }
 
 .footerContent {
-  @apply w-full md:w-3/4;
+  @apply w-full col-span-2;
 }
 
 .footerTitle {
@@ -19,11 +19,11 @@
 }
 
 .footerLinks {
-  @apply w-2/4 mx-auto md:grid md:grid-cols-2 md:gap-10 font-medium;
+  @apply w-fit mx-auto grid grid-cols-1 md:grid-cols-[repeat(2,minmax(250px,300px))] md:place-content-center gap-10 font-medium;
 }
 
 .footerLinks section {
-  @apply mb-8 flex flex-col gap-8 md:mb-0;
+  @apply flex flex-col gap-8;
 }
 
 .footerLinks section a {
