@@ -1,5 +1,13 @@
 .navigationMobileLinks {
-  @apply absolute top-0 bg-white w-full h-screen grid place-content-center gap-y-10 transition-all duration-500 ease-in-out z-[200];
+  @apply absolute top-0 bg-white w-full h-screen grid place-content-center gap-y-10 transition-all duration-500 ease-in-out z-[200] overflow-auto;
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .navigationMobileLinks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 10%;
+  }
 }
 
 .navigationMobileCloseBtn {
