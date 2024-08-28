@@ -53,7 +53,6 @@ const MainNavigation = () => {
                 >{link.label}</Link>
                 {link.subLinks && (
                   <div className={clsx([styles.subLinksWrapper, "group-hover:block"])}>
-                    <div className={styles.subLinksIndicator} />
                     <div className={styles.subLinksContainer}>
                       {link.subLinks.map(subLink => (
                         <Link
