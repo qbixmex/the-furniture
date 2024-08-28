@@ -12,12 +12,11 @@ const Breadcrumbs: React.FC<Readonly<Props>> = ({ page, slug }) => {
 
   return (
     <section className={styles.wrapper}>
-      <Link href="/" className={styles.link}><Home size={22} /></Link>
+      <Link href="/" className={`${styles.link} group`}>
+        <Home size={18} className="group-hover:text-slate-500" />
+      </Link>
       <span className={styles.text}><FaChevronRight /></span>
-      {!slug
-        ? <span className={styles.text}>{ page }</span>
-        : <Link className={styles.link} href="#" rel="nofollow">{ page }</Link>
-      }
+      <span className={styles.text}>{ page }</span>
       {slug && (
         <>
           <span className={styles.text}><FaChevronRight /></span>

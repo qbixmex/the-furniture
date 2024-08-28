@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Breadcrumbs } from "../(components)/ui";
+import ContactForm from "../(components)/contact-form";
 
 type Props = {
   params: {
@@ -10,8 +11,14 @@ type Props = {
 const Page: FC<Props> = ({ params: { page }}) => {
   return (
     <>
-      <Breadcrumbs page={page} />
-      <h1 className="heading">{page}</h1>
+      <h1 className="absolute top-[-9999px] left-[-9999px]">{page}</h1>
+
+      <div className="container mx-auto px-5 md:px-0 mb-10">
+        <Breadcrumbs page={page} />
+        {page === "contact" && (
+          <ContactForm />
+        )}
+      </div>
     </>
   );
 };

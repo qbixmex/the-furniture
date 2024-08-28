@@ -27,27 +27,20 @@
 }
 
 .navigationLink::after {
-  @apply absolute content-[''] left-0 -bottom-[8px] w-0 h-[3px] bg-current transition-[width] duration-[250ms] ease-in-out;
+  @apply absolute content-[''] left-0 -bottom-[8px] w-full h-0.5 bg-transparent;
 }
 
+.navigationLinkActive::after,
 .navigationLink:hover::after {
-  @apply w-full;
-}
-
-.navigationLinkActive::after {
-  @apply w-full;
+  @apply bg-current;
 }
 
 .subLinksWrapper {
   @apply absolute top-0 left-0 w-[300px] h-[100px] hidden hover:block;
 }
 
-.subLinksIndicator {
-  @apply absolute top-10 left-[68px] z-0 size-4 bg-white rotate-45;
-}
-
 .subLinksContainer {
-  @apply absolute top-12 left-12 z-20 flex flex-col gap-4 bg-white py-5 px-8 rounded-md shadow-md;
+  @apply absolute top-10 left-12 z-20 flex flex-col gap-4 bg-white py-5 px-8 rounded shadow-md;
 }
 
 .subLink {
@@ -56,9 +49,9 @@
 }
 
 .subLink::after {
-  @apply absolute content-[''] left-0 -bottom-[8px] w-0 h-[3px] bg-current transition-[width] duration-[250ms] ease-in-out;
+  @apply absolute content-[''] left-0 -bottom-[8px] w-full h-[3px] bg-transparent;
 }
 
 .subLink:hover::after {
-  @apply w-full;
+  @apply bg-current;
 }

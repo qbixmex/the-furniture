@@ -59,12 +59,13 @@ const NavigationMobile: React.FC<{
             rel={(link.url === "#") ? "nofollow" : undefined}
             onClick={() => {
               if (link.url !== "#") {
+                setSubLinksState(SUB_LINKS_INITIAL_STATE);
                 closeMenu();
                 return;
               }
-              setSubLinksState((prev) => ({
+              setSubLinksState(() => ({
                 ...SUB_LINKS_INITIAL_STATE,
-                [link.label.toLowerCase()]: !prev[link.label.toLowerCase()],
+                [link.label.toLowerCase()]: true,
               }));
             }}
             className={clsx(styles.navigationMobileLink, {
@@ -81,7 +82,10 @@ const NavigationMobile: React.FC<{
                   key={subLink.id}
                   href={subLink.url}
                   rel={(subLink.url === "#") ? "nofollow" : undefined}
-                  onClick={closeMenu}
+                  onClick={() => {
+                    setSubLinksState(SUB_LINKS_INITIAL_STATE);
+                    closeMenu();
+                  }}
                   className={styles.subLink}
                 >{subLink.label}</Link>
               ))}

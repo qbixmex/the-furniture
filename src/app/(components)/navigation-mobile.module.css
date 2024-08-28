@@ -19,11 +19,11 @@
 }
 
 .navigationMobileLink::after {
-  @apply block content-[''] w-0 h-[3px] bg-current absolute transition-[width] duration-200 ease-in-out left-0 -bottom-2;
+  @apply absolute left-0 -bottom-2 content-[''] w-full h-[3px] bg-transparent transition-colors duration-300;
 }
 
 .navigationMobileLink:hover::after {
-  @apply w-full;
+  @apply bg-current;
 }
 
 .subLinksWrapper {
@@ -35,9 +35,9 @@
 }
 
 .subLink::after {
-  @apply absolute content-[''] left-0 -bottom-[8px] w-0 h-[3px] bg-current transition-[width] duration-[250ms] ease-in-out;
+  @apply absolute left-0 -bottom-2 content-[''] w-full h-[3px] bg-transparent transition-colors duration-300;
 }
 
 .subLink:hover::after {
-  @apply w-full;
+  @apply bg-current;
 }

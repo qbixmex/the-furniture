@@ -7,7 +7,7 @@
 }
 
 .footerLogo img {
-  @apply size-[200px];
+  @apply size-[130px];
 }
 
 .footerContent {
