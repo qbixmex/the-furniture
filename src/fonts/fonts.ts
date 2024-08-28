@@ -107,7 +107,7 @@ export const copperplate = localFont({
     },
     {
       path: "./copperplate/OPTICopperplate.otf",
-      weight: "500",
+      weight: "400",
       style: "normal",
     },
     {

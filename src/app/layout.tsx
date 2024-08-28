@@ -6,7 +6,7 @@ import clsx from "clsx";
 import Footer from "./(components)/footer";
 
 export const metadata: Metadata = {
-  title: "The Furniture",
+  title: "TH Furniture",
   description: "Furniture for your home",
 };
 
@@ -17,6 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/images/favicon.png" sizes="32x32" />
+      </head>
       <body className={clsx([
         livvic.variable,
         helveticaNeue.variable,

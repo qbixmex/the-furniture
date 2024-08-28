@@ -15,11 +15,11 @@
 }
 
 .footerTitle {
-  @apply text-center mb-10 md:text-left md:w-2/4 md:mx-auto text-lg font-medium;
+  @apply text-center mb-10 md:text-left md:w-2/4 md:mx-auto text-lg font-[800];
 }
 
 .footerLinks {
-  @apply w-fit mx-auto grid grid-cols-1 md:grid-cols-[repeat(2,minmax(250px,300px))] md:place-content-center gap-10 font-medium;
+  @apply w-fit mx-auto grid grid-cols-1 md:grid-cols-[repeat(2,minmax(250px,300px))] md:place-content-center gap-10 font-[200];
 }
 
 .footerLinks section {
@@ -39,5 +39,6 @@
 }
 
 .footerCopyright {
-  @apply hidden italic text-sm text-slate-400 font-thin;
+  @apply hidden;
+  /* @apply col-span-3 pt-10 text-center text-xs italic text-slate-700 font-[200]; */
 }

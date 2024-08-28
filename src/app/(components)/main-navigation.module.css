@@ -1,5 +1,5 @@
 .wrapper {
-  @apply container px-5 mx-auto lg:p-0;
+  @apply container px-5 mx-auto;
 }
 
 .layout {
@@ -7,11 +7,11 @@
 }
 
 .logo {
-  @apply py-5 md:py-10;
+  @apply size-[75px] flex justify-center items-center;
 }
 
 .logo img {
-  @apply size-[50px];
+  @apply w-full h-auto;
 }
 
 .mobileMenuBtn {
@@ -19,15 +19,15 @@
 }
 
 .navigation {
-  @apply hidden relative flex-1 lg:flex lg:justify-around;
+  @apply hidden relative flex-1 lg:flex lg:justify-center gap-[50px];
 }
 
 .navigationLink {
-  @apply relative text-base font-copperplate font-medium;
+  @apply relative text-sm font-copperplate font-[400];
 }
 
 .navigationLink::after {
-  @apply absolute content-[''] left-0 -bottom-[8px] w-full h-0.5 bg-transparent;
+  @apply absolute content-[''] left-0 -bottom-[10px] w-full h-0.5 bg-transparent;
 }
 
 .navigationLinkActive::after,
@@ -40,7 +40,11 @@
 }
 
 .subLinksContainer {
-  @apply absolute top-10 left-12 z-20 flex flex-col gap-4 bg-white py-5 px-8 rounded shadow-md;
+  @apply absolute top-8 left-0 z-20 flex flex-col gap-4 bg-white py-5 px-8 rounded shadow-md;
+}
+
+.navigationLink:hover::after:has(.subLinksContainer) {
+  @apply bg-transparent;
 }
 
 .subLink {

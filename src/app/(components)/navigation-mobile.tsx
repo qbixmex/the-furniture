@@ -52,6 +52,14 @@ const NavigationMobile: React.FC<{
           <X size={36} />
         </button>
       </div>
+      <Link
+        href="/"
+        onClick={() => {
+          setSubLinksState(SUB_LINKS_INITIAL_STATE);
+          closeMenu()
+        }}
+        className={styles.navigationMobileLink}
+      >Home</Link>
       {navLinks.map((link) => (
         <div key={link.id}>
           <Link
