@@ -13,7 +13,7 @@ import { useState } from "react";
 const MainNavigation = () => {
 
   const pathname = usePathname();
-  const [ isMobileMenuOpen, setIsMobileMenuOpen ] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const openMobileMenu = () => {
     setIsMobileMenuOpen(true);
@@ -43,7 +43,7 @@ const MainNavigation = () => {
           </button>
           <nav className={styles.navigation}>
             {navLinks.map((link) => (
-              <div key={link.id} className="group cursor-pointer">
+              <div key={link.id} className="relative group cursor-pointer">
                 <Link
                   href={link.url}
                   rel={(link.url === "#") ? "nofollow" : undefined}
@@ -52,7 +52,8 @@ const MainNavigation = () => {
                   })}
                 >
                   {link.label}
-                  {link.subLinks && (
+                </Link>
+                {link.subLinks && (
                   <div className={clsx([styles.subLinksWrapper, "group-hover:block"])}>
                     <div className={styles.subLinksContainer}>
                       {link.subLinks.map(subLink => (
@@ -66,7 +67,6 @@ const MainNavigation = () => {
                     </div>
                   </div>
                 )}
-                </Link>
               </div>
             ))}
           </nav>
