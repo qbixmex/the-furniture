@@ -38,7 +38,7 @@ const ContactForm: React.FC<Readonly<Props>> = () => {
             id="phone"
             name="phone"
             className="rounded border border-slate-500 p-2 text-slate-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-slate-800"
-            type="text"
+            type="phone"
             autoComplete="off"
           />
         </div>
