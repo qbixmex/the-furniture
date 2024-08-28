@@ -31,11 +31,11 @@
 }
 
 .footerLinks section a::after {
-  @apply absolute content-[''] top-[30px] left-0 h-[3px] w-0 bg-white transition-[width] duration-[250ms] ease-in-out;
+  @apply absolute content-[''] top-[30px] left-0 h-[3px] w-full bg-transparent transition-colors duration-300;
 }
 
 .footerLinks section a:hover::after {
-  @apply w-full;
+  @apply bg-current;
 }
 
 .footerCopyright {
