@@ -30,7 +30,7 @@ const MainNavigation = () => {
           <figure className={styles.logo}>
             <Link href="/">
               <Image
-                src="/images/the-furniture-logo.jpg"
+                src="/images/the-furniture-logo-100-x-100.jpg"
                 alt="The Furniture Logo"
                 height={150}
                 width={150}
@@ -50,8 +50,9 @@ const MainNavigation = () => {
                   className={clsx(styles.navigationLink, {
                     [styles.navigationLinkActive]: pathname.includes(link.label.toLowerCase()),
                   })}
-                >{link.label}</Link>
-                {link.subLinks && (
+                >
+                  {link.label}
+                  {link.subLinks && (
                   <div className={clsx([styles.subLinksWrapper, "group-hover:block"])}>
                     <div className={styles.subLinksContainer}>
                       {link.subLinks.map(subLink => (
@@ -65,6 +66,7 @@ const MainNavigation = () => {
                     </div>
                   </div>
                 )}
+                </Link>
               </div>
             ))}
           </nav>
