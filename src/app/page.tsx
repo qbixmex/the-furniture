@@ -26,7 +26,7 @@ export default function Home() {
             <Image
               key={sofa.id}
               src={sofa.url}
-              className="bg-gray-500 w-full h-auto mb-7 object-cover object-left-top rounded md:mb-0"
+              className="bg-gray-500 w-full h-[400px] object-left-bottom sm:h-[500px] lg:h-auto mb-7 object-cover lg:object-left-top rounded md:mb-0"
               width={480}
               height={590}
               alt={sofa.name}
