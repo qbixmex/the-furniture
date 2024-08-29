@@ -41,7 +41,7 @@ export default function Home() {
         <h2 className="text-4xl mb-5 text-white uppercase font-extrabold font-helvetica-neue">
           Inspiration
         </h2>
-        <Slider slides={inspiration} />
+        <Slider className="relative z-0" slides={inspiration} />
       </section>
     </>
   );

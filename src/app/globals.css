@@ -14,9 +14,6 @@
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
   }
-  .header {
-    @apply bg-black sticky top-0 left-0 z-[100];
-  }
   .main {
     @apply bg-white text-slate-900;
   }
