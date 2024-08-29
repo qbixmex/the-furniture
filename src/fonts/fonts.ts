@@ -20,48 +20,43 @@ export const helveticaNeue = localFont({
       style: "italic",
     },
     {
-      path: "./helvetica-neue-5/HelveticaNeueLight.otf",
-      weight: "200",
-      style: "normal",
-    },
-    {
-      path: "./helvetica-neue-5/HelveticaNeueLightItalic.otf",
-      weight: "200",
-      style: "italic",
-    },
-    {
       path: "./helvetica-neue-5/HelveticaNeueThin.otf",
-      weight: "300",
+      weight: "200",
       style: "normal",
     },
     {
       path: "./helvetica-neue-5/HelveticaNeueThinItalic.otf",
+      weight: "200",
+      style: "italic",
+    },
+    {
+      path: "./helvetica-neue-5/HelveticaNeueLight.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "./helvetica-neue-5/HelveticaNeueLightItalic.otf",
       weight: "300",
       style: "italic",
     },
     {
-      path: "./helvetica-neue-5/HelveticaNeueMedium.otf",
+      path: "./helvetica-neue-5/HelveticaNeueRoman.otf",
       weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./helvetica-neue-5/HelveticaNeueMedium.otf",
+      weight: "500",
       style: "normal",
     },
     {
       path: "./helvetica-neue-5/HelveticaNeueMediumItalic.otf",
-      weight: "400",
+      weight: "500",
       style: "italic",
     },
     {
-      path: "./helvetica-neue-5/HelveticaNeueRoman.otf",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "./helvetica-neue-5/HelveticaNeueRoman.otf",
-      weight: "500",
-      style: "normal",
-    },
-    {
       path: "./helvetica-neue-5/HelveticaNeueItalic.ttf",
-      weight: "500",
+      weight: "600",
       style: "italic",
     },
     {
@@ -75,22 +70,22 @@ export const helveticaNeue = localFont({
       style: "italic",
     },
     {
-      path: "./helvetica-neue-5/HelveticaNeueBlack.otf",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "./helvetica-neue-5/HelveticaNeueBlackItalic.otf",
-      weight: "700",
-      style: "italic",
-    },
-    {
       path: "./helvetica-neue-5/HelveticaNeueHeavy.otf",
-      weight: "800",
+      weight: "700",
       style: "normal",
     },
     {
       path: "./helvetica-neue-5/HelveticaNeueHeavyItalic.otf",
+      weight: "700",
+      style: "italic",
+    },
+    {
+      path: "./helvetica-neue-5/HelveticaNeueBlack.otf",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "./helvetica-neue-5/HelveticaNeueBlackItalic.otf",
       weight: "800",
       style: "italic",
     },

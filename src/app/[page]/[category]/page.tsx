@@ -6,25 +6,30 @@ import Link from "next/link";
 type Props = {
   params: {
     page: string;
-    slug: string;
+    category: string;
   };
 };
 
-const SubPage: React.FC<Props> = ({ params: { page, slug } }) => {
+const CategoryPage: React.FC<Props> = ({ params: { page, category } }) => {
   return (
     <>
-      <h1 className="absolute top-[-9999px] left-[-9999px]">{slug}</h1>
+      <h1 className="absolute top-[-9999px] left-[-9999px]">{category}</h1>
 
       <div className="container mx-auto px-5 md:px-0 mb-10">
-        <Breadcrumbs page={page} slug={slug} />
+        <Breadcrumbs page={page} category={category} />
         <section className="md:grid md:grid-cols-2 md:gap-5">
           {sofas.map((sofa) => (
-            <Link key={sofa.id} href="#" className="group">
+            <Link
+              key={sofa.id}
+              href={sofa.slug !== "#" ? `/${page}/${category}/${sofa.slug}` : "#"}
+              rel={sofa.slug === "#" ? "nofollow" : undefined }
+              className="group"
+            >
               <figure className="mb-10 md:mb-0">
                 <Image
                   src={sofa.url}
                   className="rounded-t group-hover:filter group-hover:brightness-90 transition-all"
-                  alt={`${sofa.id} sofa`}
+                  alt={`${sofa.name} sofa`}
                   width={1280}
                   height={853}
                 />
@@ -33,12 +38,11 @@ const SubPage: React.FC<Props> = ({ params: { page, slug } }) => {
                 </figcaption>
               </figure>
             </Link>
-          ))
-          }
+          ))}
         </section>
       </div>
     </>
   );
 };
 
-export default SubPage;
+export default CategoryPage;

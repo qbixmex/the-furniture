@@ -4,7 +4,6 @@ import { type CSSProperties, type FC } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, EffectCreative } from 'swiper/modules';
-import clsx from "clsx";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -24,16 +23,15 @@ type Props = {
 const Slider: FC<Props> = ({ slides, className, style }) => {
 
   return (
-    <section className={clsx(className)} style={style}>
+    <section className={className} style={style}>
       <Swiper
-        style={
-          {
-            '--swiper-navigation-color': '#fff',
-            '--swiper-pagination-color': '#fff',
-            '--swiper-navigation-size': '30px',
-            '--swiper-navigation-position': '10px',
-          } as React.CSSProperties
-        }
+        style={{
+          '--swiper-navigation-color': '#fff',
+          '--swiper-pagination-color': '#fff',
+          '--swiper-navigation-size': '30px',
+          height: '100%',
+          maxHeight: '550px',
+        } as React.CSSProperties}
         spaceBetween={20}
         grabCursor={true}
         navigation={true}
@@ -54,7 +52,6 @@ const Slider: FC<Props> = ({ slides, className, style }) => {
           },
         }}
         slidesPerView="auto"
-        // pagination={{ clickable: true }}
         modules={[Autoplay, Navigation, EffectCreative]}
       >
         {slides.map((slide) => (

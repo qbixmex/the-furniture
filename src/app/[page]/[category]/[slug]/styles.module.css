@@ -1,0 +1,27 @@
+.wrapper {
+  @apply container mx-auto px-5 md:px-0 mb-10;
+}
+
+.content {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-5;
+}
+
+.details {
+  @apply bg-beige/70 rounded px-10 py-5;
+}
+
+.heading {
+  @apply text-4xl text-center uppercase font-helvetica-neue font-[800] text-zinc-800/80 mb-5;
+}
+
+.subHeading {
+  @apply text-lg text-slate-800 font-helvetica-neue font-[500] uppercase mb-2;
+}
+
+.price {
+  @apply text-lg text-center text-slate-800 font-helvetica-neue font-[400] italic mb-5;
+}
+
+.description {
+  @apply flex flex-col gap-2 text-[400] text-slate-700 font-helvetica-neue leading-loose;
+}

@@ -1,6 +1,7 @@
 type Sofa = {
   id: string;
   name: string;
+  slug: string;
   url: string;
 };
 
@@ -10,20 +11,32 @@ export type Inspiration = {
   alt: string;
 }[];
 
+export type Product = {
+  id: string;
+  name: string;
+  slug: string;
+  price: number;
+  description: string;
+  images: string[];
+};
+
 export const sofasResized: Sofa[] = [
   {
     id: "c733da22-fc7f-4684-8bf3-88daade52e8b",
     name: "Single Arm Chair",
+    slug: "single-arm-chair",
     url: "/images/home/sofas-resized/03-single-arm-chair-couch.jpg"
   },
   {
     id: "898eb4f1-e1a5-4d29-ac74-01971ef60aa8",
     name: "The One Sofa",
+    slug: "the-one-sofa",
     url: "/images/home/sofas-resized/02-the-one-sofa.jpg"
   },
   {
     id: "06c94d9c-3fe2-4933-863b-7c8511523249",
     name: "Ottoman Sofa",
+    slug: "ottoman-sofa",
     url: "/images/home/sofas-resized/01-ottoman-sofa.jpg"
   },
 ];
@@ -70,21 +83,41 @@ export const sofas: Sofa[] = [
   {
     id: "a1413222-bcc3-4a03-9f2c-785299d0177d",
     name: "Karlina",
+    slug: "karlina",
     url: "/images/living/sofas/01-karlina.jpg",
   },
   {
     id: "c53791f3-b219-4055-985a-953d5b1b6852",
     name: "Hanna",
+    slug: "#",
     url: "/images/living/sofas/02-hanna.jpg",
   },
   {
     id: "c19c0829-7ff0-4723-8e85-04cd64f136d6",
     name: "Ethan",
+    slug: "#",
     url: "/images/living/sofas/03-ethan.jpg",
   },
   {
     id: "4d2f0198-f4e1-48ac-90d9-0066166e3433",
     name: "Preston",
+    slug: "#",
     url: "/images/living/sofas/04-preston.jpg",
   },
+];
+
+export const products: Product[] = [
+  {
+    id: "afbbb9e4-f6cf-47a5-ba21-90fc6d31ecfc",
+    name: "Karlina Sofa",
+    slug: "karlina",
+    price: 10_500,
+    description: "<p>The world's most comfortable sofa. Built for laidback lounging.</p><p>The Karlina sofa features the sink-in comfort of soft feather and down construction around a premium foam core for support. Easy to customize.</p><p>It's a modern marriage of versatility, perfect proportions and unmatched comfort. Guaranteed for life.</p>",
+    images: [
+      "/images/living/sofas/01-karlina.jpg",
+      "/images/living/sofas/01-karlina.jpg",
+      "/images/living/sofas/01-karlina.jpg",
+      "/images/living/sofas/01-karlina.jpg",
+    ]
+  }
 ];
