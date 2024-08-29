@@ -44,7 +44,7 @@
 }
 
 .subLinksContainer {
-  @apply absolute top-8 left-0 z-20 flex flex-col gap-4 py-5 px-8 rounded shadow-md;
+  @apply absolute top-11 left-0 z-20 flex flex-col gap-4 py-5 px-8 rounded shadow-md;
 }
 
 .navigationLink:hover::after:has(.subLinksContainer) {
