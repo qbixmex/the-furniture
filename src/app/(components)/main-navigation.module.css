@@ -1,3 +1,7 @@
+.header {
+  @apply sticky top-0 left-0 z-[100];
+}
+
 .wrapper {
   @apply container px-5 mx-auto;
 }
@@ -7,7 +11,7 @@
 }
 
 .logo {
-  @apply size-[75px] flex justify-center items-center;
+  @apply size-[100px] flex justify-center items-center;
 }
 
 .logo img {
@@ -19,7 +23,7 @@
 }
 
 .navigation {
-  @apply hidden relative flex-1 lg:flex lg:justify-center gap-[50px];
+  @apply hidden relative flex-1 lg:flex lg:justify-center lg:gap-[50px] xl:gap-[75px];
 }
 
 .navigationLink {
@@ -40,7 +44,7 @@
 }
 
 .subLinksContainer {
-  @apply absolute top-8 left-0 z-20 flex flex-col gap-4 bg-white py-5 px-8 rounded shadow-md;
+  @apply absolute top-8 left-0 z-20 flex flex-col gap-4 py-5 px-8 rounded shadow-md;
 }
 
 .navigationLink:hover::after:has(.subLinksContainer) {

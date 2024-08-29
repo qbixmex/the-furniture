@@ -4,6 +4,7 @@ import { MainNavigation } from "./(components)";
 import "./globals.css";
 import clsx from "clsx";
 import Footer from "./(components)/footer";
+import { ScrollUp } from "./(components)/ui";
 
 export const metadata: Metadata = {
   title: "TH Furniture",
@@ -33,6 +34,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </div>
+        <ScrollUp />
       </body>
     </html>
   );

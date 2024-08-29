@@ -12,9 +12,9 @@ export type Inspiration = {
 
 export const sofasResized: Sofa[] = [
   {
-    id: "06c94d9c-3fe2-4933-863b-7c8511523249",
-    name: "Ottoman Sofa",
-    url: "/images/home/sofas-resized/01-ottoman-sofa.jpg"
+    id: "c733da22-fc7f-4684-8bf3-88daade52e8b",
+    name: "Single Arm Chair",
+    url: "/images/home/sofas-resized/03-single-arm-chair-couch.jpg"
   },
   {
     id: "898eb4f1-e1a5-4d29-ac74-01971ef60aa8",
@@ -22,9 +22,9 @@ export const sofasResized: Sofa[] = [
     url: "/images/home/sofas-resized/02-the-one-sofa.jpg"
   },
   {
-    id: "c733da22-fc7f-4684-8bf3-88daade52e8b",
-    name: "Single Arm Chair",
-    url: "/images/home/sofas-resized/03-single-arm-chair-couch.jpg"
+    id: "06c94d9c-3fe2-4933-863b-7c8511523249",
+    name: "Ottoman Sofa",
+    url: "/images/home/sofas-resized/01-ottoman-sofa.jpg"
   },
 ];
 

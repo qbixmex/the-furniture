@@ -8,12 +8,13 @@ import { Menu } from "lucide-react";
 import { navLinks } from '@/data/nav-links';
 import clsx from "clsx";
 import NavigationMobile from "./navigation-mobile";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const MainNavigation = () => {
 
   const pathname = usePathname();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [ isMobileMenuOpen, setIsMobileMenuOpen ] = useState(false);
+  const [ isScrolled, setIsScrolled ] = useState(false);
 
   const openMobileMenu = () => {
     setIsMobileMenuOpen(true);
@@ -23,17 +24,36 @@ const MainNavigation = () => {
     setIsMobileMenuOpen(false)
   };
 
+  const handleScroll = () => {
+    (window.scrollY > 50)
+      ? setIsScrolled(true)
+      : setIsScrolled(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    };
+  }, []);
+
   return (
-    <header className="header">
+
+    <header
+      className={clsx(styles.header, {
+        "bg-black": !isScrolled,
+        "bg-transparent lg:bg-[rgba(0,0,0,0.25)] py-5": isScrolled,
+      })}
+    >
       <div className={styles.wrapper}>
         <div className={styles.layout}>
-          <figure className={styles.logo}>
+          <figure className={styles.logo} style={{ display: isScrolled ? 'none' : 'flex' }}>
             <Link href="/">
               <Image
                 src="/images/the-furniture-logo-100-x-100.jpg"
                 alt="The Furniture Logo"
-                height={150}
-                width={150}
+                height={120}
+                width={120}
                 title="The Furniture"
               />
             </Link>
@@ -55,7 +75,10 @@ const MainNavigation = () => {
                 </Link>
                 {link.subLinks && (
                   <div className={clsx([styles.subLinksWrapper, "group-hover:block"])}>
-                    <div className={styles.subLinksContainer}>
+                    <div className={clsx(styles.subLinksContainer, {
+                      "bg-white": !isScrolled,
+                      "bg-[rgba(255,255,255,0.75)]": isScrolled,
+                    })}>
                       {link.subLinks.map(subLink => (
                         <Link
                           key={subLink.id}
@@ -78,6 +101,7 @@ const MainNavigation = () => {
         </div>
       </div>
     </header>
+
   );
 };
 
