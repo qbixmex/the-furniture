@@ -41,8 +41,8 @@ const MainNavigation = () => {
 
     <header
       className={clsx(styles.header, {
-        "bg-black": !isScrolled,
-        "bg-transparent lg:bg-[rgba(0,0,0,0.25)] py-5": isScrolled,
+        [styles.navigationSolid]: !isScrolled,
+        [styles.navigationTranslucid]: isScrolled,
       })}
     >
       <div className={styles.wrapper}>
