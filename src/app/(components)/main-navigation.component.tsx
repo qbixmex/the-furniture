@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import styles from "./main-navigation.module.css";
 import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
@@ -9,6 +8,7 @@ import { navLinks } from '@/data/nav-links';
 import clsx from "clsx";
 import NavigationMobile from "./navigation-mobile";
 import { useEffect, useState } from "react";
+import { THFurnitureLogo } from "./icons";
 
 const MainNavigation = () => {
 
@@ -25,9 +25,10 @@ const MainNavigation = () => {
   };
 
   const handleScroll = () => {
-    (window.scrollY > 50)
-      ? setIsScrolled(true)
-      : setIsScrolled(false);
+    const isCurrentlyScrolled = window.scrollY >= 50;
+    if (isScrolled !== isCurrentlyScrolled) {
+      setIsScrolled(isCurrentlyScrolled);
+    }
   };
 
   useEffect(() => {
@@ -35,27 +36,24 @@ const MainNavigation = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll)
     };
-  }, []);
+  }, [isScrolled]);
 
   return (
 
     <header
       className={clsx(styles.header, {
-        [styles.navigationSolid]: !isScrolled,
-        [styles.navigationTranslucid]: isScrolled,
+        [styles.headerUnScrolled]: !isScrolled,
+        [styles.headerScrolled]: isScrolled
       })}
     >
       <div className={styles.wrapper}>
         <div className={styles.layout}>
-          <figure className={styles.logo} style={{ display: isScrolled ? 'none' : 'flex' }}>
+          <figure className={clsx(styles.logo, {
+            [styles.logoSizeFull]: !isScrolled,
+            [styles.logoSizeHalf]: isScrolled
+          })}>
             <Link href="/">
-              <Image
-                src="/images/the-furniture-logo-100-x-100.jpg"
-                alt="The Furniture Logo"
-                height={120}
-                width={120}
-                title="The Furniture"
-              />
+              <THFurnitureLogo />
             </Link>
           </figure>
           <button className={styles.mobileMenuBtn} onClick={openMobileMenu}>

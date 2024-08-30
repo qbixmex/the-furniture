@@ -1,9 +1,17 @@
 .header {
-  @apply sticky top-0 left-0 z-[100];
+  @apply sticky top-0 left-0 z-[100] py-5;
+}
+
+.headerUnScrolled {
+  @apply lg:bg-gradient-to-b lg:from-[rgba(0,0,0,0.5)] lg:via-[rgba(0,0,0,0.25)] lg:to-transparent transition-all duration-300 ease-in-out;
+}
+
+.headerScrolled {
+  @apply lg:bg-gradient-to-b lg:from-[rgba(0,0,0,0.5)] lg:via-[rgba(0,0,0,0.25)] lg:to-transparent transition-all duration-300 ease-in-out;
 }
 
 .wrapper {
-  @apply container px-5 mx-auto;
+  @apply container mx-auto;
 }
 
 .layout {
@@ -11,11 +19,25 @@
 }
 
 .logo {
-  @apply size-[100px] flex justify-center items-center;
+  @apply flex justify-center items-center;
 }
 
-.logo img {
-  @apply w-full h-auto;
+.logoSizeFull {
+  width: 100px;
+  height: 100px;
+  transform-origin: center;
+  transition:
+    width 0.3s ease-in-out,
+    height 0.3s ease-in-out;
+}
+
+.logoSizeHalf {
+  width: 50px;
+  height: 50px;
+  transform-origin: center;
+  transition:
+    width 0.3s ease-in-out,
+    height 0.3s ease-in-out;
 }
 
 .mobileMenuBtn {
@@ -23,15 +45,7 @@
 }
 
 .navigation {
-  @apply hidden relative flex-1 lg:flex lg:justify-center lg:gap-[50px] xl:gap-[75px];
-}
-
-.navigationSolid {
-  @apply bg-black;
-}
-
-.navigationTranslucid {
-  @apply lg:bg-gradient-to-b lg:from-[rgba(0,0,0,0.5)] lg:via-[rgba(0,0,0,0.25)] lg:to-transparent py-5;
+  @apply hidden relative flex-1 lg:flex lg:justify-center lg:gap-[50px] xl:gap-[75px] transition-all duration-300 ease-in-out;
 }
 
 .navigationLink {
