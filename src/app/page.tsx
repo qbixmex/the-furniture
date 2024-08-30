@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Button } from "./(components)";
 import Slider from "./(components)/ui/slider";
 import { sofasResized, inspiration } from "@/data/furniture";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
         <Image
           src="/images/home/00-the-one-sofa.jpg"
           alt="The Furniture Sofa"
-          className="w-full max-w-[1440px] lg:auto object-cover object-left-top"
+          className="w-full max-w-[1440px] lg:h-full lg:max-h-[720px] object-cover object-center"
           width={1440}
           height={960}
           style={{ aspectRatio: "3 / 2" }}
@@ -42,6 +43,19 @@ export default function Home() {
           Inspiration
         </h2>
         <Slider className="relative z-0" slides={inspiration} />
+      </section>
+      <section className="relative">
+        <Image
+          src="/images/home/th-furniture-contact.jpg"
+          alt="The Furniture Sofa"
+          className="relative w-full max-w-[1440px] lg:h-[720px] object-cover object-center z-0"
+          width={1440}
+          height={960}
+          style={{ aspectRatio: "3 / 2" }}
+        />
+        <Link href="/contact">
+          <Button className="absolute left-0 right-0 mx-auto w-[300px] bottom-5 z-1">contact</Button>
+        </Link>
       </section>
     </>
   );
