@@ -25,7 +25,7 @@ const MainNavigation = () => {
   };
 
   const handleScroll = () => {
-    const isCurrentlyScrolled = window.scrollY >= 50;
+    const isCurrentlyScrolled = window.scrollY > 20;
     if (isScrolled !== isCurrentlyScrolled) {
       setIsScrolled(isCurrentlyScrolled);
     }
