@@ -8,7 +8,7 @@ const Footer = () => {
         <figure className={styles.footerLogo}>
           <Link href="/">
             <Image
-              src="/images/the-furniture-logo.jpg"
+              src="/images/th-furniture-logo.jpg"
               width={200}
               height={200}
               alt="The Furniture"
