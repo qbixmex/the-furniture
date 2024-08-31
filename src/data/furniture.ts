@@ -1,4 +1,4 @@
-type Sofa = {
+export type Sofa = {
   id: string;
   name: string;
   slug: string;
