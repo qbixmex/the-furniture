@@ -1,0 +1,7 @@
+.wrapper {
+  @apply container pt-16 px-5 pb-8 mx-auto md:grid md:grid-cols-3 md:gap-7;
+}
+
+.image {
+  @apply w-full h-[400px] object-left-bottom sm:h-[500px] lg:h-auto mb-7 object-cover lg:object-left-top rounded md:mb-0;
+}
