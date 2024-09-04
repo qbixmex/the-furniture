@@ -2,6 +2,7 @@ import { getProductBySlug } from "@/actions";
 import { Breadcrumbs, SliderThumbnails } from "@/app/(components)/ui";
 import styles from "./styles.module.css";
 import { convertCADCurrency } from "@/utils";
+import { redirect } from "next/navigation";
 
 type Props = {
   params: {
@@ -16,14 +17,8 @@ const ItemPage: React.FC<Props> = ({ params: { page, category, slug } }) => {
   const product = getProductBySlug(slug);
 
   if (!product) {
-    return <div>Product not found</div>;
+    redirect("/");
   }
-
-  const productImages = product.images.map((imageUrl) => ({
-    id: product.id,
-    url: imageUrl,
-    alt: product.name
-  }));
 
   return (
     <div className={styles.wrapper}>
@@ -35,16 +30,16 @@ const ItemPage: React.FC<Props> = ({ params: { page, category, slug } }) => {
 
       <section className={styles.content}>
         <section>
-          <SliderThumbnails images={productImages} />
+          <SliderThumbnails images={product.images} />
         </section>
 
         <section className={styles.details}>
           <h1 className={styles.heading}>
-            { product.name }
+            {product.name}
           </h1>
 
           <p className={styles.price}>
-            { convertCADCurrency(product.price) }
+            {convertCADCurrency(product.price)}
           </p>
 
           <h2 className={styles.subHeading}>
@@ -52,7 +47,7 @@ const ItemPage: React.FC<Props> = ({ params: { page, category, slug } }) => {
           </h2>
 
           <div
-            className={ styles.description }
+            className={styles.description}
             dangerouslySetInnerHTML={{ __html: product.description }}
           ></div>
         </section>
