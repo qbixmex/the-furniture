@@ -3,6 +3,11 @@ export type Sofa = {
   name: string;
   slug: string;
   url: string;
+  images?: {
+    id: string;
+    name: string;
+    url: string;
+  }[];
 };
 
 export type Inspiration = {
@@ -17,7 +22,11 @@ export type Product = {
   slug: string;
   price: number;
   description: string;
-  images: string[];
+  images: {
+    id: string;
+    alt: string;
+    url: string;
+  }[];
 };
 
 export const sofasResized: Sofa[] = [
@@ -114,10 +123,26 @@ export const products: Product[] = [
     price: 10_500,
     description: "<p>The world's most comfortable sofa. Built for laidback lounging.</p><p>The Karlina sofa features the sink-in comfort of soft feather and down construction around a premium foam core for support. Easy to customize.</p><p>It's a modern marriage of versatility, perfect proportions and unmatched comfort. Guaranteed for life.</p>",
     images: [
-      "/images/living/sofas/01-karlina.jpg",
-      "/images/living/sofas/01-karlina.jpg",
-      "/images/living/sofas/01-karlina.jpg",
-      "/images/living/sofas/01-karlina.jpg",
-    ]
+      {
+        id: "c31c5401-720c-436a-88ef-7cc745327293",
+        alt: "Karlina Sofa",
+        url: "/images/living/sofas/karlina/01-karlina-sofa.jpg"
+      },
+      {
+        id: "e8668a7c-df30-469e-b45f-21bd2ef6668c",
+        alt: "Karlina Sofa",
+        url: "/images/living/sofas/karlina/02-karlina-sofa.jpg"
+      },
+      {
+        id: "b48ddc7a-7e85-4ccd-970f-40abca0a432c",
+        alt: "Karlina Sofa",
+        url: "/images/living/sofas/karlina/03-karlina-sofa.jpg"
+      },
+      {
+        id: "63c0d5ee-b81d-40d2-893a-a42a229c4420",
+        alt: "Karlina Sofa",
+        url: "/images/living/sofas/karlina/04-karlina-sofa.jpg"
+      },
+    ],
   }
 ];

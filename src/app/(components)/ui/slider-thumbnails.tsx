@@ -1,6 +1,7 @@
 "use client";
 
 import { FC, useState, type CSSProperties } from 'react';
+import Image from 'next/image';
 import { type Swiper as SwiperType } from "swiper";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, FreeMode, Navigation, Thumbs } from 'swiper/modules';
@@ -10,17 +11,14 @@ import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import './slider-thumbnails.css';
+import { Product } from '@/data/furniture';
 
 type Props = {
-  images: {
-    id: string;
-    url: string;
-    alt: string;
-  }[];
+  images: Product["images"];
 };
 
 const SliderThumbnails: FC<Props> = ({ images }) => {
-  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
+  const [ thumbsSwiper, setThumbsSwiper ] = useState<SwiperType | null>(null);
 
   return (
     <>
@@ -41,12 +39,12 @@ const SliderThumbnails: FC<Props> = ({ images }) => {
         }}
         speed={1000}
         modules={[Autoplay, FreeMode, Navigation, Thumbs]}
-        className="mySwiper2"
+        className="mySwiper2 "
       >
         {
           images.map((image) => (
             <SwiperSlide key={image.id}>
-              <img src={image.url} alt={image.alt} />
+              <Image src={image.url} alt={image.alt} width={640} height={426} />
             </SwiperSlide>
           ))
         }
@@ -64,7 +62,7 @@ const SliderThumbnails: FC<Props> = ({ images }) => {
         {
           images.map((image) => (
             <SwiperSlide key={image.id}>
-              <img src={image.url} alt={image.alt} />
+              <Image src={image.url} alt={image.alt} width={150} height={100} />
             </SwiperSlide>
           ))
         }
