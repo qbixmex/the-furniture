@@ -24,19 +24,20 @@ const MainNavigation = () => {
     setIsMobileMenuOpen(false)
   };
 
-  const handleScroll = () => {
-    const isCurrentlyScrolled = window.scrollY > 20;
-    if (isScrolled !== isCurrentlyScrolled) {
-      setIsScrolled(isCurrentlyScrolled);
-    }
-  };
-
+  
   useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 25) {
+        setIsScrolled(true);
+      } else if (window.scrollY < 5) {
+        setIsScrolled(false);
+      }
+    };
     window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll)
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, [isScrolled]);
+  }, []);
 
   return (
 

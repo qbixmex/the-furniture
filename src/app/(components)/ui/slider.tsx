@@ -1,6 +1,7 @@
 "use client";
 
 import { type CSSProperties, type FC } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, EffectCreative } from 'swiper/modules';
@@ -22,6 +23,8 @@ type Props = {
 
 const Slider: FC<Props> = ({ slides, className, style }) => {
 
+  const router = useRouter();
+
   return (
     <section className={className} style={style}>
       <Swiper
@@ -31,9 +34,10 @@ const Slider: FC<Props> = ({ slides, className, style }) => {
           '--swiper-navigation-size': '30px',
           height: '100%',
           maxHeight: '550px',
+          cursor: 'pointer',
         } as React.CSSProperties}
         spaceBetween={20}
-        grabCursor={true}
+        grabCursor={false}
         navigation={true}
         autoplay={{
           delay: 3000,
@@ -53,18 +57,19 @@ const Slider: FC<Props> = ({ slides, className, style }) => {
         }}
         slidesPerView="auto"
         modules={[Autoplay, Navigation, EffectCreative]}
+        onClick={() => router.push('/inspiration')}
       >
-        {slides.map((slide) => (
-          <SwiperSlide key={slide.id}>
-            <Image
-              className="w-full h-auto max-w-[1440px] max-h-[720px] object-cover rounded"
-              src={slide.url}
-              width={1440}
-              height={960}
-              alt={slide.alt}
-            />
-          </SwiperSlide> 
-        ))}
+          {slides.map((slide) => (
+            <SwiperSlide key={slide.id}>
+              <Image
+                className="w-full h-auto max-w-[1440px] max-h-[720px] object-cover rounded"
+                src={slide.url}
+                width={1440}
+                height={960}
+                alt={slide.alt}
+              />
+            </SwiperSlide> 
+          ))}
       </Swiper>
     </section>
   );
