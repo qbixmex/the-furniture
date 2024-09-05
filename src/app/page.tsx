@@ -14,7 +14,7 @@ export default function Home() {
             className="w-full h-full"
             poster="/videos/home-hero-poster.jpg"
           >
-            <source src="/videos/hero.mp4" type="video/mp4" />
+            <source src="/videos/hero-15.mp4" type="video/mp4" />
           </video>
         </div>
         <Button className="absolute left-0 bottom-5 right-0 m-auto w-fit">New Collection</Button>
