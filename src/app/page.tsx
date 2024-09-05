@@ -20,7 +20,7 @@ export default function Home() {
         <Button className="absolute left-0 bottom-5 right-0 m-auto w-fit">New Collection</Button>
       </section>
       <section className="bg-beige-light">
-        <section className="bg-beige py-14 font-copperplate text-white text-lg text-center font-medium">
+        <section className="bg-beige py-4 font-medium font-copperplate text-white text-base md:py-8 md:text-lg text-center">
           <h2>Furniture that will last a lifetime</h2>
         </section>
 

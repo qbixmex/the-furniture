@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Sofa } from "@/data/furniture";
 import { easeInOut, motion } from "framer-motion";
 import styles from "./sofas.module.css";
+import Link from "next/link";
 
 type Props = {
   sofas: Sofa[];
@@ -38,13 +39,18 @@ const Sofas: React.FC<Readonly<Props>> = ({ sofas }) => {
           viewport={{ once: true, amount: 0.25 }}
           custom={index}
         >
-          <Image
-            src={sofa.url}
-            className={styles.image}
-            width={480}
-            height={590}
-            alt={sofa.name}
-          />
+          <Link
+            href={sofa.href ?? "#"}
+            rel={sofa.href === "#" ? "nofollow" : "follow"}
+          >
+            <Image
+              src={sofa.url}
+              className={styles.image}
+              width={480}
+              height={590}
+              alt={sofa.name}
+            />
+          </Link>
         </motion.figure>
       ))}
     </section>

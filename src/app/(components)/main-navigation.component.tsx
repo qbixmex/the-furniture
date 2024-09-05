@@ -27,7 +27,9 @@ const MainNavigation = () => {
   
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 25) {
+      if (window.scrollY > 20 && window.scrollY < 25) {
+        window.scrollTo(0, 0);
+      } else if (window.scrollY > 25) {
         setIsScrolled(true);
       } else if (window.scrollY < 5) {
         setIsScrolled(false);
