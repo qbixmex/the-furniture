@@ -84,7 +84,7 @@ const InspirationGallery = () => {
                     height={960}
                   />
                   <motion.button
-                    className="absolute top-5 right-5 bg-white hover:bg-gray-600 hover:text-white text-black rounded-full p-2 transition-colors duration-300"
+                    className="absolute top-5 right-5 bg-white/30 hover:bg-gray-600/30 hover:text-white text-black rounded-full p-2 transition-colors duration-300"
                     onClick={() => setSelectedImage(INITIAL_STATE)}
                   >
                     <X className="size-5 md:size-6" />
