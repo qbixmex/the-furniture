@@ -11,8 +11,8 @@ export default function Home() {
       <section className="relative">
         <div className="relative">
           <video loop muted autoPlay
+            className="w-full h-full"
             poster="/videos/home-hero-poster.jpg"
-            className="w-full max-w-[1440px] lg:h-full lg:max-h-[720px] object-cover object-center"
           >
             <source src="/videos/hero.mp4" type="video/mp4" />
           </video>
