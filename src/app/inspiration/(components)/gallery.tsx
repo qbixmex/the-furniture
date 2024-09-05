@@ -72,22 +72,22 @@ const InspirationGallery = () => {
               onClick={() => setSelectedImage(INITIAL_STATE)}
             >
               <motion.div
-                className="relative w-90% h-[300px] md:w-full md:max-w-[1024px] md:h-auto"
+                className="relative w-90% h-[300px] md:w-full md:max-w-[1080px] md:h-auto"
                 onClick={(e) => e.stopPropagation()}
               >
-                <div className="relative w-full h-full">
+                <div className="relative w-[90%] mx-auto lg:w-full lg:max-w-[1440px]">
                   <Image
                     src={selectedImage.url}
                     alt={selectedImage.alt}
-                    className="w-[90%] mx-auto max-w-[1080px] h-auto lg:w-full rounded object-cover"
+                    className="w-full h-full lg:w-full rounded object-cover"
                     width={1440}
                     height={960}
                   />
                   <motion.button
-                    className="absolute top-[8%] right-[10%] md:top-[5%] md:right-[8%] lg:top-3 lg:right-3 bg-white hover:bg-gray-600 hover:text-white text-black rounded-full p-2 transition-colors duration-300"
+                    className="absolute top-5 right-5 bg-white hover:bg-gray-600 hover:text-white text-black rounded-full p-2 transition-colors duration-300"
                     onClick={() => setSelectedImage(INITIAL_STATE)}
                   >
-                    <X size={22} />
+                    <X className="size-5 md:size-6" />
                   </motion.button>
                 </div>
               </motion.div>
