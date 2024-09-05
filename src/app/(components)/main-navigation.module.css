@@ -3,15 +3,15 @@
 }
 
 .headerUnScrolled {
-  @apply lg:bg-gradient-to-b lg:from-[rgba(0,0,0,0.5)] lg:via-[rgba(0,0,0,0.25)] lg:to-transparent transition-all duration-300 ease-in-out;
+  @apply bg-gradient-to-b from-[rgba(0,0,0,0.5)] via-[rgba(0,0,0,0.25)] to-transparent transition-all duration-300 ease-in-out;
 }
 
 .headerScrolled {
-  @apply lg:bg-gradient-to-b lg:from-[rgba(0,0,0,0.5)] lg:via-[rgba(0,0,0,0.25)] lg:to-transparent transition-all duration-300 ease-in-out;
+  @apply bg-gradient-to-b from-[rgba(0,0,0,0.5)] via-[rgba(0,0,0,0.25)] to-transparent transition-all duration-300 ease-in-out;
 }
 
 .wrapper {
-  @apply container mx-auto;
+  @apply container mx-auto px-5 lg:px-0;
 }
 
 .layout {
@@ -23,8 +23,7 @@
 }
 
 .logoSizeFull {
-  width: 100px;
-  height: 100px;
+  @apply size-[50px] md:size-[100px];
   transform-origin: center;
   transition:
     width 0.3s ease-in-out,

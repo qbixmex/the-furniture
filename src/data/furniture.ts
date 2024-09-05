@@ -3,6 +3,7 @@ export type Sofa = {
   name: string;
   slug: string;
   url: string;
+  href?: string;
   images?: {
     id: string;
     name: string;
@@ -34,19 +35,22 @@ export const sofasResized: Sofa[] = [
     id: "c733da22-fc7f-4684-8bf3-88daade52e8b",
     name: "Single Arm Chair",
     slug: "single-arm-chair",
-    url: "/images/home/sofas-resized/03-single-arm-chair-couch.jpg"
+    url: "/images/home/sofas-resized/03-single-arm-chair-couch.jpg",
+    href: "#"
   },
   {
     id: "898eb4f1-e1a5-4d29-ac74-01971ef60aa8",
     name: "The One Sofa",
     slug: "the-one-sofa",
-    url: "/images/home/sofas-resized/02-the-one-sofa.jpg"
+    url: "/images/home/sofas-resized/02-the-one-sofa.jpg",
+    href: "/living/sofas"
   },
   {
     id: "06c94d9c-3fe2-4933-863b-7c8511523249",
     name: "Ottoman Sofa",
     slug: "ottoman-sofa",
-    url: "/images/home/sofas-resized/01-ottoman-sofa.jpg"
+    url: "/images/home/sofas-resized/01-ottoman-sofa.jpg",
+    href: "#"
   },
 ];
 
