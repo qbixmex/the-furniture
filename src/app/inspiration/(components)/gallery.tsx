@@ -6,6 +6,8 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { inspiration } from "@/data/furniture";
 import { X } from "lucide-react";
+import styles from "./gallery.module.css";
+import clsx from "clsx";
 
 type Image = {
   id: string;
@@ -23,10 +25,12 @@ const InspirationGallery = () => {
   const [selectedImage, setSelectedImage] = useState<Image>(INITIAL_STATE);
 
   return (
-    <div className="container mx-auto px-5 md:px-0 mb-10">
-      <h1 className="absolute top-[-9999px] left-[-9999px]">Inspiration Gallery</h1>
+    <div className={styles.container}>
+      <h1 className={styles.heading}>Inspiration Gallery</h1>
+
       <Breadcrumbs page="inspiration" />
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-3">
+
+      <div className={styles.thumbnailContainer}>
         {inspiration.map((item) => (
           <motion.div
             key={item.id}
@@ -37,12 +41,12 @@ const InspirationGallery = () => {
                 alt: item.alt,
               })
             }
-            className="cursor-pointer"
+            style={{ cursor: "pointer"}}
           >
             <Image
               src={item.url}
               alt={item.alt}
-              className="w-full h-full rounded object-cover"
+              className={styles.imageThumbnail}
               width={1440}
               height={960}
               priority
@@ -59,7 +63,7 @@ const InspirationGallery = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-black bg-opacity-75 z-40"
+              className={styles.overlay}
               onClick={() => setSelectedImage(INITIAL_STATE)}
             />
 
@@ -68,26 +72,26 @@ const InspirationGallery = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.5 }}
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 flex items-center justify-center z-[1000]"
+              className={styles.effectsWrapper}
               onClick={() => setSelectedImage(INITIAL_STATE)}
             >
               <motion.div
-                className="relative w-90% h-[300px] md:w-full md:max-w-[1080px] md:h-auto"
+                className={styles.motionDiv}
                 onClick={(e) => e.stopPropagation()}
               >
-                <div className="relative w-[90%] mx-auto lg:w-full lg:max-w-[1440px]">
+                <div className={styles.imageContainer}>
                   <Image
                     src={selectedImage.url}
                     alt={selectedImage.alt}
-                    className="w-full h-full lg:w-full rounded object-cover"
+                    className={styles.imageFullSize}
                     width={1440}
                     height={960}
                   />
                   <motion.button
-                    className="absolute top-5 right-5 bg-white/30 hover:bg-gray-600/30 hover:text-white text-black rounded-full p-2 transition-colors duration-300"
+                    className={clsx([styles.closeBtn, styles.closeBtnShow])}
                     onClick={() => setSelectedImage(INITIAL_STATE)}
                   >
-                    <X className="size-5 md:size-6" />
+                    <X className={styles.closeBtnIcon} />
                   </motion.button>
                 </div>
               </motion.div>
