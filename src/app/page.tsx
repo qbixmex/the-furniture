@@ -40,7 +40,7 @@ export default function Home() {
         <Image
           src="/images/home/th-furniture-contact.jpg"
           alt="The Furniture Sofa"
-          className="relative w-full max-w-[1440px] lg:h-[720px] object-cover object-center z-0"
+          className="relative w-full object-cover object-center z-0"
           width={1440}
           height={960}
           style={{ aspectRatio: "3 / 2" }}
