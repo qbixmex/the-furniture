@@ -9,14 +9,14 @@ export default function Home() {
   return (
     <>
       <section className="relative">
-        <Image
-          src="/images/home/00-the-one-sofa.jpg"
-          alt="The Furniture Sofa"
-          className="w-full max-w-[1440px] lg:h-full lg:max-h-[720px] object-cover object-center"
-          width={1440}
-          height={960}
-          style={{ aspectRatio: "3 / 2" }}
-        />
+        <div className="relative">
+          <video loop muted autoPlay
+            poster="/videos/home-hero-poster.jpg"
+            className="w-full max-w-[1440px] lg:h-full lg:max-h-[720px] object-cover object-center"
+          >
+            <source src="/videos/hero.mp4" type="video/mp4" />
+          </video>
+        </div>
         <Button className="absolute left-0 bottom-5 right-0 m-auto w-fit">New Collection</Button>
       </section>
       <section className="bg-beige-light">
