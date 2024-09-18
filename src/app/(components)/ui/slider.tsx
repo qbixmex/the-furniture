@@ -62,7 +62,7 @@ const Slider: FC<Props> = ({ slides, className, style }) => {
           {slides.map((slide) => (
             <SwiperSlide key={slide.id}>
               <Image
-                className="w-full h-auto max-w-[1440px] max-h-[720px] object-cover rounded"
+                className="w-full h-auto max-h-[720px] object-cover rounded"
                 src={slide.url}
                 width={1440}
                 height={960}
