@@ -53,7 +53,7 @@ export default function Home() {
           <p className="text-2xl md:text-3xl text-center font-copperplate">Let&apos;s make it happen !</p>
         </div>
         <Link href="/contact">
-          <Button className="absolute left-0 right-0 mx-auto w-[300px] bottom-5 z-1">contact</Button>
+          <Button className="absolute left-0 right-0 mx-auto w-[300px] bottom-5 z-1">contact us</Button>
         </Link>
       </section>
     </>
