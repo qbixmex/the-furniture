@@ -1,0 +1,49 @@
+.container {
+  @apply mx-auto px-5 mb-10 md:px-0;
+}
+
+.heading {
+  @apply absolute top-[-9999px] left-[-9999px];
+}
+
+.overlay {
+  @apply fixed inset-0 bg-black bg-opacity-75 z-40;
+}
+
+.effectsWrapper {
+  @apply fixed inset-0 flex items-center justify-center z-[1000];
+}
+
+.motionDiv {
+  @apply relative w-[90%] h-[300px] md:w-full md:max-w-[1080px] md:h-auto;
+}
+
+.imageContainer {
+  @apply relative w-[90%] mx-auto lg:w-full lg:max-w-[1440px];
+}
+
+.thumbnailContainer {
+  @apply grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-3;
+}
+
+.imageThumbnail {
+  @apply w-full h-full rounded object-cover;
+}
+
+.imageFullSize {
+  @apply w-full h-full lg:w-full rounded object-cover;
+}
+
+.closeBtn {
+  @apply absolute top-5 right-5 bg-white/30 hover:bg-gray-600/30 hover:text-white text-black rounded-full p-2 transition-colors duration-300;
+}
+
+.closeBtnIcon {
+  @apply size-5 md:size-6;
+}
+
+@media (max-width: 960px) and (orientation: landscape) {
+  .imageContainer {
+    @apply w-screen h-screen mx-0;
+  }
+}
