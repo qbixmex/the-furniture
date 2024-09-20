@@ -12,7 +12,7 @@ const Button: React.FC<{
   return (
     <button
       className={clsx([
-        "bg-neutral-800 hover:bg-neutral-600 text-neutral-50 p-4 py-2 rounded uppercase font-medium transition-colors duration-300",
+        "bg-neutral-800 text-slate-50 hover:bg-white hover:text-slate-800 p-4 py-2 rounded uppercase font-medium transition-colors duration-300",
         className
       ])}
       style={style}
