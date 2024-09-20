@@ -47,13 +47,13 @@ export default function Home() {
           height={720}
           style={{ aspectRatio: "3 / 2" }}
         />
-        <div className="absolute top-0 left-0 w-full h-full bg-black/40 flex flex-col justify-center items-center text-white">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-copperplate mb-10">Let&apos;s Bring<br />Your Vision to Life</h2>
-          <p className="w-full text-xl text-center px-5 md:px-0 md:text-3xl lg:w-[50%] font-[200] tracking-wide font-helvetica-neue italic mb-20">Ready to transform your space?<br />Reach out to our design experts today and start your journey towards creating luxurious, personalized interiors that reflect your style.</p>
-          <p className="text-2xl md:text-3xl text-center font-copperplate">Let&apos;s make it happen !</p>
+        <div className="absolute top-0 left-0 w-full h-full bg-black/30 flex flex-col justify-center items-center text-white">
+          <h2 className="text-3xl text-shadow-sm shadow-slate-900/30 md:text-5xl lg:text-6xl font-copperplate mb-10">Let&apos;s Bring<br />Your Vision to Life</h2>
+          <p className="w-full text-xl text-shadow-sm shadow-slate-900/30 text-center px-5 md:px-0 md:text-3xl lg:w-[50%] font-[500] tracking-widest font-livvic italic mb-20">Ready to transform your space?<br />Reach out to our design experts today and start your journey towards creating luxurious, personalized interiors that reflect your style.</p>
+          <p className="text-2xl text-shadow-sm shadow-slate-900/30 md:text-3xl text-center font-copperplate">Let&apos;s make it happen !</p>
         </div>
         <Link href="/contact">
-          <Button className="absolute left-0 right-0 mx-auto w-[300px] bottom-5 z-1">contact us</Button>
+          <Button className="absolute left-0 right-0 mx-auto w-[300px] bottom-10 z-1">contact us</Button>
         </Link>
       </section>
     </>

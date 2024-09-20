@@ -12,6 +12,12 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-helvetica-neue)", "sans-serif"],
       },
+      textShadow: {
+        sm: '2px 2px 4px var(--tw-shadow-color)',
+        DEFAULT: '4px 4px 8px var(--tw-shadow-color)',
+        md: '0 0 12px var(--tw-shadow-color)',
+        lg: '0 0 16px var(--tw-shadow-color)',
+      },
       colors: {
         beige: {
           light: "#F3F3F3",
@@ -36,6 +42,16 @@ const config: Config = {
         },
       };
       addUtilities(newUtilities);
+    }),
+    plugin(function({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          'text-shadow': (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme('textShadow') }
+      )
     }),
   ],
 };
